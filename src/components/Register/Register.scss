@@ -19,9 +19,15 @@
     margin: 20px auto;
     border-radius: 10px;
     border:none;
-
+    font-size:19px;
+    
     &::placeholder{
         text-align: center;
+    }
+
+    &:focus{
+        outline:none;
+        background: rgb(219, 218, 218);
     }
 }
 
