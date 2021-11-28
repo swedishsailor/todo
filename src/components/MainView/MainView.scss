@@ -1,0 +1,42 @@
+.mainview{
+    margin:50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mainviewList{
+    width: 356px;
+    height: 356px;
+    border:1px dashed #000;
+    margin:35px;
+
+    &:last-of-type{
+        background:rgba(255,255,255,0.15);
+    }
+}
+
+.plusIcon{
+    margin: 40% auto;
+    font-size: 48px;
+    opacity: 0.45;
+
+    &:hover{
+        color:chartreuse;
+        opacity: 1;
+    }
+}
+
+.exitIcon{
+    font-size: 48px;
+    position: absolute;
+    top:20px;
+    right: 45px;
+    opacity: 0.7;
+    color:#fff;
+
+    &:hover{
+        opacity:1;
+        color:red;
+    }
+}

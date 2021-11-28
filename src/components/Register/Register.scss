@@ -1,0 +1,41 @@
+.Register{
+    width: 535px;
+    height: 80%;
+    background:#D980FA;
+    margin:150px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerHeader{
+    font-size:34px;
+    margin: 45px 0;
+}
+
+.registerInput{
+    width: 80%;
+    height:35px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border:none;
+
+    &::placeholder{
+        text-align: center;
+    }
+}
+
+.registerButton{
+    height: 65px;
+    width: 135px;
+    margin: 35px auto;
+}
+
+.registerText{
+    font-size: 18px;
+
+    &:first-of-type{
+        font-weight: bold;
+        font-size: 21px;
+    }
+}

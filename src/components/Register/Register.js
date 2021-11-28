@@ -1,6 +1,8 @@
 import React from 'react';
 import './Register.scss';
-import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 class Register extends React.Component {
 
@@ -10,11 +12,10 @@ class Register extends React.Component {
      <h1 className="registerHeader"> Register </h1>
      <input className="registerInput" type="email" placeholder="Your email"></input>
      <input className="registerInput" type="password" placeholder="Password"></input>
-     <button type="submit" className="registerButton">submit</button>
-     <p className="registerText"> or</p>
-     <p className="registerText"> if you don't have account</p>
-     <Link to="/register" >            
-     <button className="registerRegister"> register </button>
+     <input className="registerInput" type="password" placeholder="Repeat Password"></input>
+     <button type="submit" className="registerButton">Create</button>
+     <Link to="/">
+     <FontAwesomeIcon icon={faDoorOpen} className="exitIcon"/>
      </Link>
     </div>
   );

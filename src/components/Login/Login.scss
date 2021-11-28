@@ -16,13 +16,20 @@
 .loginInput{
     width: 80%;
     height:35px;
-    margin: 15px auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    border:none;
+    
+    &::placeholder{
+        text-align: center;
+    }
 }
 
 .loginButton{
     height: 65px;
     width: 135px;
-    margin: 35px auto;
+    margin: 10px auto;
+    margin-top: 20px;
 }
 
 .loginText{
@@ -31,5 +38,17 @@
     &:first-of-type{
         font-weight: bold;
         font-size: 21px;
+    }
+}
+
+.register{
+    font-size: 32px;
+    text-decoration: none;
+    color:green;
+    margin:15px auto;
+
+    &:hover{
+        color:#fff;
+        opacity:0.7;
     }
 }
