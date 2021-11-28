@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './MainView.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faDoorOpen, faCheckSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getListsInfo } from '../../redux/actions';
 
-class MainView extends React.Component {
+const MainView = () => {
 
-    render(){
+  const state = useSelector((state) => ({...state}));
+  console.log(state);
+  let dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getListsInfo());
+  }, []);
+
   return (
     <div className="mainview" id="/mainview">
+
      <div className="mainviewList">
         <p className="mainviewListName">List name</p>
         <div className="mainviewTaskDiv">
@@ -17,6 +26,7 @@ class MainView extends React.Component {
         <FontAwesomeIcon icon={faTrash} className="deleteIcon"/>
         </div>
      </div>
+     
      <div className="mainviewList">
         <FontAwesomeIcon className="plusIcon" icon={faPlusCircle}/>
      </div>
@@ -25,7 +35,6 @@ class MainView extends React.Component {
      </Link>
     </div>
   );
-  }
 }
 
 export default MainView;
