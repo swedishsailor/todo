@@ -13,7 +13,7 @@ class Register extends React.Component {
      <input className="registerInput" type="email" placeholder="Your email"></input>
      <input className="registerInput" type="password" placeholder="Password"></input>
      <input className="registerInput" type="password" placeholder="Repeat Password"></input>
-     <button type="submit" className="registerButton">Create</button>
+     <button type="submit" className="loginButton">Create</button>
      <Link to="/">
      <FontAwesomeIcon icon={faDoorOpen} className="exitIcon"/>
      </Link>

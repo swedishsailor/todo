@@ -30,6 +30,19 @@
     width: 135px;
     margin: 10px auto;
     margin-top: 20px;
+    border-radius: 5px;
+    border:1px solid #000;
+    background:#009432;
+    color:#fff;
+    font-size: 30px;
+    box-shadow: 10px 10px #565656;
+
+    &:hover{
+        box-shadow: none;
+        transform: translateX(10px)  translateY(10px);
+        opacity: 0.8;
+        cursor: pointer;
+    }
 }
 
 .loginText{
