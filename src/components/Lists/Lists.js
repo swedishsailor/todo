@@ -8,7 +8,7 @@ const Lists = ({ lists }) => {
             {lists ? lists.map((item) => (
                 <div className="mainviewList" key={item.id}>
                     <p className="listsListName">{item.name}</p>
-                    <Tasks tasks={item.task} />
+                    <Tasks key={item.id} tasks={item.task} />
                 </div>
             )) : null}
         </>

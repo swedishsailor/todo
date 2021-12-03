@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_LISTS, GET_REGISTER, POST_LIST} from '../types';
+import {GET_LISTS, GET_REGISTER, POST_LIST, PUT_TASK} from '../types';
 
 const URL = "https://todolist-fake-server.herokuapp.com";
 
@@ -32,12 +32,28 @@ export function addList(payload){
             Accept: "application.json",
             "Content-Type": "application/json",
         },
-        data: JSON.stringify({payload}),
+        data: JSON.stringify(payload),
+    }
+    ).then((response) => response.data);
+    return {
+        type:POST_LIST,
+        payload:request,
+    }
+}
+
+export function addTask(payload, e){
+    const request = axios(`${URL}/to-do-lists/${e.target.id}`, {
+        method: "PUT",
+        headers: {
+            Accept: "application.json",
+            "Content-Type": "application/json",
+        },
+        data: JSON.stringify(payload),
     }
     ).then((response) => response.data);
     console.log(request);
     return {
-        type:POST_LIST,
-        payload: request,
+        type:PUT_TASK,
+        request,
     }
 }
